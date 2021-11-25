@@ -1,4 +1,4 @@
-from classes.factory import get_pet
+from patterns.factory import get_pet
 
 if __name__ == '__main__':
 
