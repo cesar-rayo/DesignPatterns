@@ -1,5 +1,4 @@
 class Dog:
-
     def __init__(self, name):
         self.name = name
 
@@ -8,7 +7,6 @@ class Dog:
 
 
 class Cat:
-
     def __init__(self, name):
         self.name = name
 
@@ -23,7 +21,6 @@ def get_pet(pet="dog"):
 
 
 if __name__ == '__main__':
-
     d = get_pet("cat")
     print(d.speak())
 

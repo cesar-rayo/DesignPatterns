@@ -13,6 +13,17 @@ class Director:
         return self._builder.car
 
 
+class Car:
+    """Product"""
+    def __init__(self):
+        self.model = None
+        self.tires = None
+        self.engine = None
+
+    def __str__(self):
+        return "{}|{}|{}".format(self.model, self.tires, self.engine)
+
+
 class Builder:
     """Abstract Builder"""
     def __init__(self):
@@ -34,19 +45,26 @@ class SkyLarkBuilder(Builder):
         self.car.engine = "Turbo Engine"
 
 
-class Car:
-    """Product"""
-    def __init__(self):
-        self.model = None
-        self.tires = None
-        self.engine = None
+class TModelBuilder(Builder):
+    """Concrete Builder"""
+    def add_model(self):
+        self.car.model = "T Model"
 
-    def __str__(self):
-        return "{}|{}|{}".format(self.model, self.tires, self.engine)
+    def add_tires(self):
+        self.car.tires = "Luxury tires"
+
+    def add_engine(self):
+        self.car.engine = "Regular Engine"
 
 
 if __name__ == '__main__':
     builder = SkyLarkBuilder()
+    director = Director(builder)
+    director.construct_car()
+    car = director.get_car()
+    print(car)
+
+    builder = TModelBuilder()
     director = Director(builder)
     director.construct_car()
     car = director.get_car()

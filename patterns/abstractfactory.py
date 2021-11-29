@@ -15,6 +15,7 @@ class DogFactory:
         """Returns Dog Food object"""
         return "Dog Food!"
 
+
 class Cat:
     def speak(self):
         return "Meow!"
@@ -34,7 +35,6 @@ class CatFactory:
 
 
 class PetStore:
-
     def __init__(self, pet_factory=None):
         self._pet_factory = pet_factory
 
