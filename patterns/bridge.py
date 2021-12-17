@@ -30,6 +30,8 @@ class Circle(object):
 if __name__ == "__main__":
     circle1 = Circle(1, 2, 3, DrawingAPIOne())
     circle1.draw()
+    circle1.scale(2)
+    circle1.draw()
 
     circle2 = Circle(2, 3, 4, DrawingAPITwo())
     circle2.draw()
