@@ -12,8 +12,8 @@ class Subject(object):
     def detach(self, observer):
         try:
             self._observers.remove(observer)
-        except ValueError:
-            pass
+        except ValueError as err:
+            print("There was an error: {}".format(err))
 
     def notify(self, modifier=None):
         for observer in self._observers:
