@@ -39,7 +39,9 @@ class Core(Subject):
 
 
 class TempViewer:
+    """Observer class"""
     def update(self, subject):
+        """Method invoked each time the temp changes"""
         print("Temperature viewer: {} has Temperature {}".format(subject._name, subject._temp))
 
 
