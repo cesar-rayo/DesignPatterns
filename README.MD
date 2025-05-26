@@ -1,6 +1,6 @@
 # Design Patterns
 
-## Strategy Pattern
+## Strategy Pattern:
 ![StrategyPattern](images/StrategyPattern.png)
 The first example will be using Interfaces where each class will have to implement its own methods:
 
@@ -10,7 +10,7 @@ The first example will be using Interfaces where each class will have to impleme
 ### BehaviorInterfaceExample:
 ![BehaviorInterfaceExample](images/BehaviorInterfaceExample.png)
 
-## Adapter Pattern
+## Adapter Pattern:
 ![AdapterPattern](images/AdapterPattern.png)
 
 ### DuckExample
