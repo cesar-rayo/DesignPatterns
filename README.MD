@@ -5,3 +5,6 @@ The first example will be using Interfaces where each class will have to impleme
 
 ### InterfaceExample:
 ![InterfaceExample](images/StrategyPattern_InterfaceExample.png)
+
+### BehaviorInterfaceExample:
+![BehaviorInterfaceExample](images/BehaviorInterfaceExample.png)
