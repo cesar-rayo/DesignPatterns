@@ -2,6 +2,7 @@ from StrategyPattern.InterfaceExample.MallardDuck import MallardDuck as Interfac
 from StrategyPattern.InterfaceExample.DecoyDuck import DecoyDuck as InterfaceDecoyDuck
 from StrategyPattern.BehaviorInterfaceExample.MallardDuck import MallardDuck as BehaviorInterfaceMallardDuck
 from StrategyPattern.BehaviorInterfaceExample.DecoyDuck import DecoyDuck as BehaviorInterfaceDecoyDuck
+from StrategyPattern.BehaviorInterfaceExample.RubberDuck import RubberDuck as BehaviorInterfaceRubberDuck
 
 
 def StrategyInterfaceExample():
@@ -21,10 +22,15 @@ def StrategyBehaviorInterfaceExample():
     mallard_duck.performFly()
     mallard_duck.swim()
     mallard_duck.performQuack()
+
     decoy_duck = BehaviorInterfaceDecoyDuck("Wood Duck")
     decoy_duck.display()
     decoy_duck.swim()
     decoy_duck.performQuack()
+
+    rubber_duck = BehaviorInterfaceRubberDuck("Yellow Duck")
+    rubber_duck.display()
+    rubber_duck.performQuack()
 
 
 if __name__ == '__main__':
