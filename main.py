@@ -5,8 +5,15 @@ from StrategyPattern.BehaviorInterfaceExample.DecoyDuck import DecoyDuck as Beha
 from StrategyPattern.BehaviorInterfaceExample.RubberDuck import RubberDuck as BehaviorInterfaceRubberDuck
 from StrategyPattern.PhoneCameraApp.CameraPlusApp import CameraPlusApp
 from StrategyPattern.PhoneCameraApp.BasicCameraApp import BasicCameraApp
+
 from AdapterPattern.DuckExample.DuckSimulator import DuckSimulator
 
+from ObserverPattern.SubjectExample.SimpleSubject import SimpleSubject
+from ObserverPattern.SubjectExample.Observer import SimpleObserver
+from ObserverPattern.WeatherStation.WeatherStation import WeatherStation
+from ObserverPattern.WeatherStation.Logger import Logger
+from ObserverPattern.WeatherStation.UserInterface import UserInterface
+from ObserverPattern.WeatherStation.AlertSystem import AlertSystem
 
 def StrategyInterfaceExample():
     mallard_duck = InterfaceExampleMallardDuck("Green Duck")
@@ -54,8 +61,39 @@ def AdapterPattern():
     DuckSimulator()
 
 
+def ObserverPattern():
+    subject = SimpleSubject()
+    observer1 = SimpleObserver("o1", subject)
+    observer2 = SimpleObserver("o2", subject)
+    observer3 = SimpleObserver("o3", subject)
+    observer2.run_process()
+    subject.changeValue(2)
+    observer1.run_process()
+    subject.changeValue(3)
+    observer3.run_process()
+
+
+def ObserverWeatherStation():
+    weather_system = WeatherStation()
+    ui = UserInterface(weather_system)
+
+    weather_system.changeTemperature("5")
+    ui.display()
+    logger = Logger(weather_system)
+    alert = AlertSystem(weather_system)
+
+    weather_system.changePressure("10")
+    alert.alert()
+
+    weather_system.changeWindSpeed("96")
+    logger.log()
+    ui.display()
+
+
 if __name__ == '__main__':
     # StrategyInterfaceExample()
     # StrategyBehaviorInterfaceExample()
     # StrategyCameraApp()
-    AdapterPattern()
+    # AdapterPattern()
+    # ObserverPattern()
+    ObserverWeatherStation()

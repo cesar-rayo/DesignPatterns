@@ -15,3 +15,9 @@ The first example will be using Interfaces where each class will have to impleme
 
 ### DuckExample
 ![DuckExample](images/DuckExample.png)
+
+## Observer Pattern:
+![ObserverPattern](images/ObserverPattern.png)
+
+### WeatherExample
+![WeatherExample](images/WeatherExample.png)
