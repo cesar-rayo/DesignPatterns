@@ -10,7 +10,7 @@ def StrategyInterfaceExample():
     decoy_duck = DecoyDuck("Wood Duck")
     decoy_duck.swim()
     decoy_duck.quack()
-    # This strategy becomes difficult to maintain since each duck class will have to implement quack and fly methods
+    # This strategy becomes problematic since each duck class will have to implement quack and fly methods
 
 
 if __name__ == '__main__':
