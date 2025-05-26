@@ -1,17 +1,18 @@
 import abc
 
 
-class Turkey:
+class Drone:
     def __init__(self, name):
         self.name = name
 
-    def display(self):
-        print(f"{self.name} is a Turkey!")
-
     @abc.abstractmethod
-    def gobble(self):
+    def beep(self):
         pass
 
     @abc.abstractmethod
-    def fly(self):
+    def spin_rotors(self):
+        pass
+
+    @abc.abstractmethod
+    def take_off(self):
         pass
