@@ -3,6 +3,9 @@ from StrategyPattern.InterfaceExample.DecoyDuck import DecoyDuck as InterfaceDec
 from StrategyPattern.BehaviorInterfaceExample.MallardDuck import MallardDuck as BehaviorInterfaceMallardDuck
 from StrategyPattern.BehaviorInterfaceExample.DecoyDuck import DecoyDuck as BehaviorInterfaceDecoyDuck
 from StrategyPattern.BehaviorInterfaceExample.RubberDuck import RubberDuck as BehaviorInterfaceRubberDuck
+from StrategyPattern.PhoneCameraApp.CameraPlusApp import CameraPlusApp
+from StrategyPattern.PhoneCameraApp.BasicCameraApp import BasicCameraApp
+from AdapterPattern.DuckExample.DuckSimulator import DuckSimulator
 
 
 def StrategyInterfaceExample():
@@ -33,6 +36,26 @@ def StrategyBehaviorInterfaceExample():
     rubber_duck.performQuack()
 
 
+def StrategyCameraApp():
+    b_camera = BasicCameraApp("Basic App")
+    b_camera.take()
+    b_camera.save("pic 1")
+    b_camera.share_text()
+    b_camera.share_social_media()
+
+    p_camera = CameraPlusApp("Plus App")
+    p_camera.take()
+    b_camera.save("pic 2")
+    b_camera.share_email()
+    b_camera.share_social_media()
+
+
+def AdapterPattern():
+    DuckSimulator()
+
+
 if __name__ == '__main__':
     # StrategyInterfaceExample()
-    StrategyBehaviorInterfaceExample()
+    # StrategyBehaviorInterfaceExample()
+    # StrategyCameraApp()
+    AdapterPattern()

@@ -9,3 +9,9 @@ The first example will be using Interfaces where each class will have to impleme
 
 ### BehaviorInterfaceExample:
 ![BehaviorInterfaceExample](images/BehaviorInterfaceExample.png)
+
+## Adapter Pattern
+![AdapterPattern](images/AdapterPattern.png)
+
+### DuckExample
+![DuckExample](images/DuckExample.png)
