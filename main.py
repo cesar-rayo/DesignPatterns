@@ -10,7 +10,7 @@ def StrategyInterfaceExample():
     mallard_duck.fly()
     mallard_duck.swim()
     mallard_duck.quack()
-    decoy_duck = InterfaceDecoyDuck("Wood Duck")
+    decoy_duck = InterfaceDecoyDuck("Wooden Duck")
     decoy_duck.swim()
     decoy_duck.quack()
     # This strategy becomes problematic since each duck class will have to implement quack and fly methods
@@ -23,7 +23,7 @@ def StrategyBehaviorInterfaceExample():
     mallard_duck.swim()
     mallard_duck.performQuack()
 
-    decoy_duck = BehaviorInterfaceDecoyDuck("Wood Duck")
+    decoy_duck = BehaviorInterfaceDecoyDuck("Wooden Duck")
     decoy_duck.display()
     decoy_duck.swim()
     decoy_duck.performQuack()
