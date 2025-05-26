@@ -1,5 +1,6 @@
 # Design Patterns
 
 ## Strategy Pattern
-The firs example will be using Interfaces where each class will have to implement its own methods
+The first example will be using Interfaces where each class will have to implement its own methods:
+
 ![InterfaceExample](images/StrategyPattern_InterfaceExample.png)
