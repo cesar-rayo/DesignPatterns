@@ -15,6 +15,20 @@ from ObserverPattern.WeatherStation.Logger import Logger
 from ObserverPattern.WeatherStation.UserInterface import UserInterface
 from ObserverPattern.WeatherStation.AlertSystem import AlertSystem
 
+from DecoratorPattern.CoffeeShopExample.DarkRoast import DarkRoast
+from DecoratorPattern.CoffeeShopExample.HouseBlend import HouseBlend
+from DecoratorPattern.CoffeeShopExample.Milk import Milk
+from DecoratorPattern.CoffeeShopExample.Mocha import Mocha
+from DecoratorPattern.CoffeeShopExample.Whip import Whip
+from DecoratorPattern.CoffeeShopExample.Soy import Soy
+from DecoratorPattern.PizzaShopExample.ThinCrustPizza import ThinCrustPizza
+from DecoratorPattern.PizzaShopExample.ThickCrustPizza import ThickCrustPizza
+from DecoratorPattern.PizzaShopExample.Cheese import Cheese
+from DecoratorPattern.PizzaShopExample.Peppers import Peppers
+from DecoratorPattern.PizzaShopExample.Olives import Olives
+
+from IteratorPattern.CafeExample.Cafe import Cafe
+
 def StrategyInterfaceExample():
     mallard_duck = InterfaceExampleMallardDuck("Green Duck")
     mallard_duck.fly()
@@ -90,10 +104,54 @@ def ObserverWeatherStation():
     ui.display()
 
 
+def DecoratorCoffeeShop():
+    beverage1 = DarkRoast()
+    beverage1 = Mocha(beverage1)
+    beverage1 = Milk(beverage1)
+    beverage1 = Whip(beverage1)
+    print(f"beverage1: {beverage1.getDescription()} ${beverage1.cost()}")
+
+    beverage2 = HouseBlend()
+    beverage2 = Mocha(beverage2)
+    beverage2 = Soy(beverage2)
+    beverage2 = Whip(beverage2)
+    beverage2 = Whip(beverage2)
+    beverage2 = Whip(beverage2)
+    print(f"beverage1: {beverage2.getDescription()} ${beverage2.cost()}")
+
+
+def DecoratorPizzaShop():
+    pizza1 = ThickCrustPizza()
+    pizza1 = Cheese(pizza1)
+    pizza1 = Cheese(pizza1)
+    pizza1 = Peppers(pizza1)
+    print(f"pizza1: {pizza1.getDescription()} ${pizza1.cost()}")
+
+    pizza2 = ThinCrustPizza()
+    pizza2 = Cheese(pizza2)
+    pizza2 = Olives(pizza2)
+    pizza2 = Peppers(pizza2)
+    print(f"pizza2: {pizza2.getDescription()} ${pizza2.cost()}")
+
+    pizza3 = ThickCrustPizza()
+    pizza3 = Cheese(pizza3)
+    pizza3 = Cheese(pizza3)
+    print(f"pizza3: {pizza3.getDescription()} ${pizza3.cost()}")
+
+
+def IteratorCafeExample():
+    cafe = Cafe()
+    cafe.printMenu(cafe.dinerMenu.createIterator())
+    cafe.printMenu(cafe.pancakeHouseMenu.createIterator())
+
+
 if __name__ == '__main__':
     # StrategyInterfaceExample()
     # StrategyBehaviorInterfaceExample()
     # StrategyCameraApp()
     # AdapterPattern()
     # ObserverPattern()
-    ObserverWeatherStation()
+    # ObserverWeatherStation()
+    # DecoratorCoffeeShop()
+    # DecoratorPizzaShop()
+    IteratorCafeExample()
