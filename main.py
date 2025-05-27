@@ -29,6 +29,13 @@ from DecoratorPattern.PizzaShopExample.Olives import Olives
 
 from IteratorPattern.CafeExample.Cafe import Cafe
 
+from FactoryPattern.SimplePizzaFactoryExample.PizzaStore import PizzaStore
+from FactoryPattern.FactoryMethodExample.ChicagoStylePizzaStore import ChicagoStylePizzaStore
+from FactoryPattern.FactoryMethodExample.NYStylePizzaStore import NYStylePizzaStore
+from FactoryPattern.CalendarExample.PacificCalendar import PacificCalendar
+from FactoryPattern.CalendarExample.MountainCalendar import MountainCalendar
+
+
 def StrategyInterfaceExample():
     mallard_duck = InterfaceExampleMallardDuck("Green Duck")
     mallard_duck.fly()
@@ -145,6 +152,35 @@ def IteratorCafeExample():
     cafe.printMenu(cafe.pancakeHouseMenu.createIterator())
 
 
+def FactoryPizzaStore():
+    pizza_store = PizzaStore()
+    pizza_store.orderPizza("Cheese")
+    pizza_store.orderPizza("Veggie")
+    pizza_store.orderPizza("Clam")
+
+
+def FactoryMethodPizzaStore():
+    chicago_store = ChicagoStylePizzaStore()
+    chicago_store.orderPizza("Cheese")
+    chicago_store.orderPizza("Pepperoni")
+
+    ny_store = NYStylePizzaStore()
+    ny_store.orderPizza("Veggie")
+    ny_store.orderPizza("Clam")
+    ny_store.orderPizza("Cheese")
+    ny_store.orderPizza("Clam")
+
+    chicago_store.printStatus()
+    ny_store.printStatus()
+
+
+def FactoryCalendarExample():
+    p_calendar = PacificCalendar()
+    p_calendar.createCalendar()
+    m_calendar = MountainCalendar()
+    m_calendar.createCalendar()
+
+
 if __name__ == '__main__':
     # StrategyInterfaceExample()
     # StrategyBehaviorInterfaceExample()
@@ -154,4 +190,7 @@ if __name__ == '__main__':
     # ObserverWeatherStation()
     # DecoratorCoffeeShop()
     # DecoratorPizzaShop()
-    IteratorCafeExample()
+    # IteratorCafeExample()
+    # FactoryPizzaStore()
+    # FactoryMethodPizzaStore()
+    FactoryCalendarExample()

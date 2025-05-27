@@ -48,3 +48,13 @@ Applying Decorator Pattern:
 
 ### CafeExample
 ![CafeExample](images/CafeExample.png)
+
+## Factory Pattern
+![FactoryPattern](images/FactoryPattern.png)
+
+### SimplePizzaFactoryExample
+![SimplePizzaFactoryExample](images/SimplePizzaFactoryExample.png)
+
+### FactoryMethodExample
+![FactoryMethodExample1](images/FactoryMethodExample1.png)
+![FactoryMethodExample2](images/FactoryMethodExample2.png)
